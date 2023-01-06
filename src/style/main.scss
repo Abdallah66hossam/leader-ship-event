@@ -9,9 +9,34 @@ html {
   font-size: 10px;
 }
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  background: #1f1f1f;
+  height: 10000px;
 }
 a {
   color: color.$white;
   text-decoration: none;
+  transition: 0.4s;
+  font-weight: 700;
+  font-size: 1.5rem;
+  &:hover {
+    color: color.$light-blue;
+  }
+}
+p {
+  color: color.$paragraph;
+}
+h1,
+h2,
+h3 {
+  color: color.$dark-blue;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  border-radius: 2.4rem;
+  padding: 1.2rem 2rem;
+  border: 0.2rem solid transparent;
 }
