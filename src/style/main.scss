@@ -11,8 +11,9 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
-  background: #1f1f1f;
+  background: color.$dark-black;
   height: 10000px;
+  color: color.$white;
 }
 a {
   color: color.$white;
@@ -21,7 +22,7 @@ a {
   font-weight: 700;
   font-size: 1.5rem;
   &:hover {
-    color: color.$light-blue;
+    color: color.$light-yellow;
   }
 }
 p {
@@ -30,7 +31,7 @@ p {
 h1,
 h2,
 h3 {
-  color: color.$dark-blue;
+  color: color.$dark-yellow;
 }
 ul {
   list-style-type: none;

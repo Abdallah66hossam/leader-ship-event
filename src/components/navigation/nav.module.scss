@@ -4,7 +4,7 @@ nav {
   background: transparent;
   z-index: 100;
   transition: all 0.3s;
-  padding: 2.7rem 8%;
+  padding: 2.2rem 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +15,7 @@ nav {
   left: 0;
   width: 100%;
   &.back {
-    background-color: color.$dark-blue;
+    background-color: color.$black;
     transition: 1.2s ease-out;
   }
   & .logo {
@@ -23,7 +23,7 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 0.3rem;
-    color: color.$light-blue;
+    color: color.$light-yellow;
     & > .bullseye {
       font-size: 4.6rem;
     }
@@ -38,11 +38,11 @@ nav {
     align-items: center;
     width: 60%;
     & li:last-child > button {
-      background-color: color.$medium-blue;
+      background-color: color.$medium-yellow;
       transition: 0.3s;
       cursor: pointer;
       &:hover {
-        background-color: color.$light-blue;
+        background-color: color.$light-yellow;
         a {
           color: color.$white;
         }
