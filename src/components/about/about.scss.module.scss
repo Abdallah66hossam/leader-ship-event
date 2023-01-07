@@ -1,0 +1,73 @@
+@use "../../style/mixins.scss" as mix;
+@use "../../style/variable.scss" as color;
+
+.about {
+  padding: 20rem 8%;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  gap: 5%;
+  & .story,
+  .people {
+    @include mix.flexCol;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  & .story {
+    line-height: 2;
+    & h2 {
+      & div:first-child {
+        font-size: 4rem;
+        color: color.$medium-yellow;
+        text-transform: capitalize;
+        span {
+          color: color.$light-yellow;
+          border-bottom: 0.4rem solid color.$light-yellow;
+          font-size: 5.5rem;
+          padding-bottom: -5rem;
+        }
+      }
+      & div:last-child {
+        font-size: 2.2rem;
+      }
+    }
+    p {
+      padding: 1.5rem 0;
+    }
+    .btns {
+      display: flex;
+      gap: 3rem;
+      margin-top: 2rem;
+      button:first-child {
+        background-color: transparent;
+        border: 2px solid color.$light-yellow;
+        color: color.$light-yellow;
+      }
+      button:last-child {
+        background-color: color.$light-yellow;
+        border: 2px solid color.$light-yellow;
+        color: color.$white;
+      }
+    }
+  }
+  & .people {
+    padding: 6rem 0;
+    & h2 {
+      font-size: 2.5rem;
+      padding-bottom: 4rem;
+      margin-bottom: 4rem;
+      border-bottom: 1px solid rgba(221, 221, 221, 0.164);
+    }
+    & .avatar {
+      @include mix.flexRow;
+      gap: 4rem;
+      & img {
+        width: 6.1rem;
+        height: 6.1rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 -0.4rem;
+        outline: 3px solid #fff;
+      }
+    }
+  }
+}

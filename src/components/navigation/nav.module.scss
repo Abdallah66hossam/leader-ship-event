@@ -4,7 +4,7 @@ nav {
   background: transparent;
   z-index: 100;
   transition: all 0.3s;
-  padding: 2.2rem 8%;
+  padding: 2.2rem 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,8 +39,6 @@ nav {
     width: 60%;
     & li:last-child > button {
       background-color: color.$medium-yellow;
-      transition: 0.3s;
-      cursor: pointer;
       &:hover {
         background-color: color.$light-yellow;
         a {

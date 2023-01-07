@@ -25,19 +25,29 @@ a {
     color: color.$light-yellow;
   }
 }
-p {
+p,
+span,
+div {
   color: color.$paragraph;
+  font-size: 1.4rem;
 }
 h1,
 h2,
 h3 {
-  color: color.$dark-yellow;
+  color: color.$medium-yellow;
 }
 ul {
   list-style-type: none;
 }
 button {
   border-radius: 2.4rem;
-  padding: 1.2rem 2rem;
+  padding: 1.4rem 2.2rem;
   border: 0.2rem solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 700;
+  font-size: 1.4rem;
+  &:hover {
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 10px 50px;
+  }
 }
