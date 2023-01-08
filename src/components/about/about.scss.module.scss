@@ -2,7 +2,7 @@
 @use "../../style/variable.scss" as color;
 
 .about {
-  padding: 20rem 8%;
+  padding: 16rem 8%;
   display: grid;
   grid-template-columns: 48% 48%;
   gap: 5%;
@@ -41,11 +41,20 @@
         background-color: transparent;
         border: 2px solid color.$light-yellow;
         color: color.$light-yellow;
+        &:hover {
+          background-color: color.$light-yellow;
+          color: color.$dark-black;
+        }
       }
       button:last-child {
-        background-color: color.$light-yellow;
-        border: 2px solid color.$light-yellow;
+        background-color: color.$medium-yellow;
+        border: 2px solid color.$medium-yellow;
         color: color.$white;
+        &:hover {
+          background-color: color.$light-yellow;
+          border: 2px solid color.$light-yellow;
+          color: color.$black;
+        }
       }
     }
   }

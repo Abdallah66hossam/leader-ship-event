@@ -1,0 +1,126 @@
+@use "../../style/mixins.scss" as mix;
+@use "../../style/variable.scss" as color;
+
+@mixin text {
+  @include mix.flexRow;
+  justify-content: space-between;
+  position: relative;
+  top: 65%;
+  width: 90%;
+  margin-left: 5%;
+  padding: 0.8rem 1.4rem;
+  background-color: color.$black;
+  border-left: 4px solid color.$light-yellow;
+  transition: 1s;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: color.$light-yellow;
+    transform: scaleX(0);
+    transition: 0.7s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  }
+  & .title {
+    position: relative;
+    z-index: 2;
+  }
+  & .links {
+    @include mix.flexRow;
+    gap: 1rem;
+    opacity: 0;
+    transition: 1s ease-out;
+    z-index: 5;
+    & .icon {
+      background-color: color.$white;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      @include mix.flexRow;
+      cursor: pointer;
+      transition: 0.4s;
+
+      & > * {
+        transition: 0.4s;
+        color: color.$black;
+        font-size: 1.6rem;
+      }
+      &:hover {
+        background-color: transparent;
+        & > * {
+          color: color.$white;
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+  & h4 {
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+}
+@mixin hoverImg {
+  &:hover {
+    & .text::before {
+      transform: scaleX(1);
+    }
+    color: color.$black;
+    & .title > * {
+      color: color.$black;
+    }
+    & .links {
+      opacity: 1;
+    }
+  }
+}
+
+.speakers {
+  display: grid;
+  grid-template-columns: 40% 55%;
+  grid-template-rows: 70% 30%;
+  row-gap: 1.6rem;
+  padding: 16rem 7%;
+  background-color: color.$black;
+  & .heading {
+    grid-column: 1/2;
+    grid-row: 1;
+    @include mix.Heading;
+    padding: 6rem 0 0 6rem;
+    & h2 div {
+      font-size: 4rem !important;
+    }
+  }
+  & .human1 {
+    height: 40rem;
+    background-position: center;
+    margin-left: 10%;
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1;
+    background-size: cover;
+    position: relative;
+    & .text {
+      @include text;
+    }
+    @include hoverImg;
+  }
+  & .people {
+    @include mix.flexRow;
+    justify-content: space-between;
+    grid-column: 1/4;
+    grid-row: 2;
+    & .human {
+      width: 23.5%;
+      height: 22rem;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      & .text {
+        @include text;
+      }
+      @include hoverImg;
+    }
+  }
+}
