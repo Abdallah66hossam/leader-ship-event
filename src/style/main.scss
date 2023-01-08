@@ -27,7 +27,8 @@ a {
 }
 p,
 span,
-div {
+div,
+small {
   color: color.$paragraph;
   font-size: 1.4rem;
 }

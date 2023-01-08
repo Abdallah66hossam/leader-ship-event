@@ -1,0 +1,35 @@
+@use "../../style/mixins.scss" as mix;
+@use "../../style/variable.scss" as color;
+
+.schedules {
+  padding: 16rem 8%;
+  & .heading {
+    @include mix.Heading;
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+  & h2 div {
+    font-size: 4rem !important;
+  }
+  .days {
+    width: 100%;
+    & button {
+      text-align: left;
+      border-radius: 0;
+      border-left: 3px solid rgba(color.$light-yellow, 0.1);
+      width: 25%;
+      height: 12rem;
+      background: transparent;
+      &.active,
+      &:hover {
+        border-left: 3px solid color.$light-yellow;
+        color: color.$light-yellow;
+        box-shadow: rgba(255, 255, 255, 0.2) 0px 10px 50px;
+      }
+      h3 {
+        font-size: 3.2rem;
+        letter-spacing: 0.2rem;
+      }
+    }
+  }
+}

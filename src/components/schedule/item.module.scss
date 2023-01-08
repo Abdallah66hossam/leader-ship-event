@@ -1,0 +1,54 @@
+@use "../../style/mixins.scss" as mix;
+@use "../../style/variable.scss" as color;
+
+.tobic {
+  display: grid;
+  grid-template-columns: 32% 62.5%;
+  column-gap: 4%;
+  padding: 5rem 0;
+  width: 100%;
+  margin: 0 auto;
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  & .place {
+    height: 30rem;
+    width: 100%;
+    grid-column: 1/2;
+    border-radius: 1.6rem;
+  }
+  & .text {
+    @include mix.flexCol;
+    align-items: flex-start;
+    & h4 {
+      font-size: 3.2rem;
+    }
+    & p {
+      padding: 2.5rem 0;
+    }
+    & .details {
+      @include mix.flexRow;
+      justify-content: start;
+      gap: 6rem;
+      width: 80%;
+      & .person {
+        @include mix.flexRow;
+        gap: 0.7rem;
+        & h6 {
+          font-weight: 400;
+        }
+      }
+      & .avatar {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        outline: 0.2rem solid color.$white;
+      }
+    }
+  }
+}
+.icon {
+  position: relative;
+  top: 0.15rem;
+  right: 0.5rem;
+}

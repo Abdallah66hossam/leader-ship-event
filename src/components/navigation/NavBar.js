@@ -20,15 +20,15 @@ const NavBar = () => {
   //     <span class="navbar-toggler-icon"></span>
   // </button>
   return (
-    <nav className={scroll && style.back}>
-      <a href="home" class={style.logo}>
+    <nav className={scroll ? style.back : ""}>
+      <a href="home" className={style.logo}>
         <BiBullseye className={style.bullseye} />
-        <span class={style.brand}>
+        <span className={style.brand}>
           <div>Leadership</div> Event
         </span>
       </a>
 
-      <ul class={style.links}>
+      <ul className={style.links}>
         <li>
           <a href="#Home">Home</a>
         </li>
