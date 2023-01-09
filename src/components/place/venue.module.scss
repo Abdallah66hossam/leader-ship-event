@@ -2,8 +2,8 @@
 @use "../../style/variable.scss" as color;
 
 .venueSec {
-  padding: 0 8% 16rem 8%;
-
+  padding: 16rem 8%;
+  background-color: color.$black;
   & .heading {
     @include mix.Heading;
     margin-bottom: 6rem;
@@ -17,7 +17,7 @@
       border-radius: 1.4rem;
     }
     & .cart {
-      background-color: color.$black;
+      background-color: color.$dark-black;
       width: 50%;
       padding: 3rem;
       height: 35rem;
