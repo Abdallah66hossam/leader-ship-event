@@ -80,10 +80,14 @@
 .speakers {
   display: grid;
   grid-template-columns: 40% 55%;
-  grid-template-rows: 70% 30%;
   row-gap: 1.6rem;
-  padding: 16rem 7%;
+  padding: 16rem 4%;
   background-color: color.$black;
+  position: relative;
+  @include res.respnesive(desktop) {
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 60% 20% 20%;
+  }
   & .heading {
     grid-column: 1/2;
     grid-row: 1;
@@ -91,6 +95,10 @@
     padding: 6rem 0 0 6rem;
     & h2 div {
       font-size: 4rem !important;
+    }
+    @include res.respnesive(desktop) {
+      grid-column: 1;
+      grid-row: 1;
     }
   }
   & .human1 {
@@ -106,22 +114,60 @@
       @include text;
     }
     @include hoverImg;
+    @include res.respnesive(desktop) {
+      grid-column: 1;
+      grid-row: 2;
+      margin-left: 0%;
+      margin-top: 4rem;
+    }
   }
   & .people {
     @include mix.flexRow;
-    justify-content: space-between;
-    grid-column: 1/4;
-    grid-row: 2;
-    & .human {
-      width: 23.5%;
-      height: 22rem;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      & .text {
-        @include text;
+    @include mix.absCenter;
+    position: relative;
+    top: 80%;
+    left: 125%;
+    gap: 5rem;
+    @include res.respnesive(desktop) {
+      left: 50%;
+      top: 20%;
+    }
+    @include res.respnesive(phone) {
+      @include mix.flexCol;
+      flex-direction: row;
+      top: -120%;
+    }
+    & section {
+      @include mix.flexRow;
+      width: 60rem;
+      gap: 5rem;
+      @include res.respnesive(desktop) {
+        @include mix.flexCol;
+        left: 0;
+        width: 50rem;
       }
-      @include hoverImg;
+      @include res.respnesive(tab) {
+        width: 30rem;
+      }
+      @include res.respnesive(phone) {
+        @include mix.flexCol;
+      }
+      & .human {
+        width: 70rem;
+        height: 22rem;
+        background-size: cover;
+        background-position: center;
+        @include res.respnesive(desktop) {
+          width: 40rem;
+        }
+        @include res.respnesive(tab) {
+          width: 30rem;
+        }
+        & .text {
+          @include text;
+        }
+        @include hoverImg;
+      }
     }
   }
 }
