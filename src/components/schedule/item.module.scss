@@ -1,5 +1,6 @@
 @use "../../style/mixins.scss" as mix;
 @use "../../style/variable.scss" as color;
+@use "../../style/responsive.scss" as res;
 
 .tobic {
   display: grid;
@@ -11,26 +12,52 @@
   &:not(:last-child) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
+  @include res.respnesive(desktop) {
+    grid-template-columns: 37% 58%;
+  }
+  @include res.respnesive(tab) {
+    grid-template-columns: 100%;
+    width: 70%;
+  }
+  @include res.respnesive(phone) {
+    width: 90%;
+  }
   & .place {
     height: 30rem;
     width: 100%;
     grid-column: 1/2;
     border-radius: 1.6rem;
+    @include res.respnesive(tab) {
+      height: 25rem;
+    }
   }
   & .text {
     @include mix.flexCol;
     align-items: flex-start;
     & h4 {
       font-size: 3.2rem;
+      @include res.respnesive(tab) {
+        font-size: 2rem;
+        padding-top: 2rem;
+      }
     }
     & p {
       padding: 2.5rem 0;
+      @include res.respnesive(tab) {
+        padding: 2rem 0;
+        font-size: 1.1rem;
+      }
     }
     & .details {
       @include mix.flexRow;
       justify-content: start;
       gap: 6rem;
       width: 80%;
+      @include res.respnesive(tab) {
+        @include mix.flexCol;
+        align-items: start;
+        height: 25rem;
+      }
       & .person {
         @include mix.flexRow;
         gap: 0.7rem;
@@ -43,6 +70,9 @@
         width: 5rem;
         border-radius: 50%;
         outline: 0.2rem solid color.$white;
+        @include res.respnesive(tab) {
+          margin-right: 1rem;
+        }
       }
     }
   }
