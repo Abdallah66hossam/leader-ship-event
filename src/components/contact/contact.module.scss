@@ -1,0 +1,94 @@
+@use "../../style/mixins.scss" as mix;
+@use "../../style/variable.scss" as color;
+@mixin inpt {
+  display: block;
+  background: color.$white;
+  border: 0;
+  padding: 1.3rem 1.3rem 1.3rem 1.3rem;
+  background-color: rgba(255, 250, 197, 0.9);
+  color: color.$black;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  width: 100%;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0.4rem 0.4rem rgba(color.$paragraph, 0.3);
+  }
+  &::placeholder {
+    color: color.$white;
+  }
+}
+
+.background {
+  background-image: url("../../assets/imgs/contact.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 65rem;
+  position: relative;
+  & .contact {
+    width: 60%;
+    @include mix.absCenter;
+    border-radius: 5rem;
+    background-color: color.$dark-black;
+    overflow: hidden;
+    height: 80%;
+    & h4 {
+      width: 100%;
+      background: color.$black;
+      padding: 3rem 0 2.1rem 5rem;
+      font-size: 3.2rem;
+      letter-spacing: 0.1rem;
+      color: color.$dark-yellow;
+    }
+    & form {
+      @include mix.absCenter;
+      position: relative;
+      @include mix.flexCol;
+      justify-content: space-between;
+      top: 40%;
+      width: 100%;
+      & .form {
+        @include mix.flexRow;
+        gap: 1.5rem;
+        width: 85%;
+        & div {
+          width: 100%;
+          & input {
+            @include inpt;
+          }
+        }
+      }
+      & textarea {
+        @include inpt;
+        width: 85%;
+        height: 15rem;
+        margin-top: 2.5rem;
+      }
+      & button,
+      .btn {
+        background-color: color.$light-yellow;
+        color: color.$white;
+        width: 85%;
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-top: 2.5rem;
+        &:hover {
+          background-color: color.$dark-yellow;
+        }
+      }
+      & small {
+        color: rgb(255, 36, 36);
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+.opacity0 {
+  opacity: 0;
+}
+.opacity1 {
+  opacity: 1;
+}
