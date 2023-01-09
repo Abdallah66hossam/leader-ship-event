@@ -1,5 +1,6 @@
 @use "../../style/mixins.scss" as mix;
 @use "../../style/variable.scss" as color;
+@use "../../style/responsive.scss" as res;
 
 @mixin text {
   @include mix.flexRow;

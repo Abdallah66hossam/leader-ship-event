@@ -7,14 +7,14 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: 130vh;
+  height: 96.5rem;
   object-fit: cover;
   z-index: -1;
   @include res.respnesive(desktop) {
-    height: 160vh;
+    height: 120rem;
   }
   @include res.respnesive(tab) {
-    height: 210vh;
+    height: 160rem;
   }
 }
 .banner {
@@ -22,7 +22,7 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: 130vh;
+  height: 96.5rem;
   background: linear-gradient(
     180deg,
     transparent 0%,
@@ -31,10 +31,10 @@ video {
   );
   z-index: 50;
   @include res.respnesive(desktop) {
-    height: 160vh;
+    height: 120rem;
   }
   @include res.respnesive(tab) {
-    height: 210vh;
+    height: 160rem;
   }
   main {
     @include mix.absCenter;
@@ -113,7 +113,7 @@ video {
       @include res.respnesive(tab) {
         @include mix.flexCol;
         gap: 2.5rem;
-        width: 65vw;
+        width: 80vw;
       }
       & article {
         overflow: hidden;
