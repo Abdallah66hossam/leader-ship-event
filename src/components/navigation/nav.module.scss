@@ -50,7 +50,8 @@ nav {
       @include mix.absCenter;
     }
     @include res.respnesive(phone) {
-      left: 20%;
+      @include mix.absCenter;
+      left: 40%;
     }
     & > .bullseye {
       font-size: 4.6rem;
