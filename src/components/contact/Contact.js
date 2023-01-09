@@ -7,8 +7,6 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  // checking the validation of the form
-  const [formIsValid, setFormIsValid] = useState(false);
   // handeling errors
   const [nameIsValid, setNameisValid] = useState(true);
   const [emailIsValid, setEmailisValid] = useState(true);
@@ -37,8 +35,7 @@ const Contact = () => {
     } else {
       setMessageisValid(false);
     }
-    if (!nameIsValid && !emailIsValid && !subjectIsValid && !meassageIsValid) {
-      setFormIsValid(true);
+    if (nameIsValid && emailIsValid && subjectIsValid && meassageIsValid) {
       setName("");
       setEmail("");
       setSubject("");
@@ -46,7 +43,7 @@ const Contact = () => {
     }
   };
   return (
-    <div className={style.background}>
+    <div className={style.background} id="Contact">
       <div className={style.contact}>
         <h4>Pleasse Say Hi!</h4>
         <form onSubmit={handelSubmition}>
@@ -60,24 +57,20 @@ const Contact = () => {
                 onChange={(e) => setName(e.target.value)}
                 className={nameIsValid ? "" : style.invalid}
               />
-              <small
-                className={meassageIsValid ? style.opacity0 : style.opacity1}
-              >
+              <small className={nameIsValid ? "" : style.opacity1}>
                 name must contains 8 character.
               </small>
             </div>
             <div>
               <input
-                type="text"
+                type="email"
                 placeholder="Email"
                 name="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className={emailIsValid ? "" : style.invalid}
               />
-              <small
-                className={meassageIsValid ? style.opacity0 : style.opacity1}
-              >
+              <small className={emailIsValid ? "" : style.opacity1}>
                 write a valid email.
               </small>
             </div>
@@ -90,9 +83,7 @@ const Contact = () => {
                 onChange={(e) => setSubject(e.target.value)}
                 className={subjectIsValid ? "" : style.invalid}
               />
-              <small
-                className={meassageIsValid ? style.opacity0 : style.opacity1}
-              >
+              <small className={subjectIsValid ? "" : style.opacity1}>
                 Please write a subject.
               </small>
             </div>
@@ -104,7 +95,7 @@ const Contact = () => {
             onChange={(e) => setMessage(e.target.value)}
             className={meassageIsValid ? "" : style.invalid}
           ></textarea>
-          <small className={meassageIsValid ? style.opacity0 : style.opacity1}>
+          <small className={meassageIsValid ? "" : style.opacity1}>
             Please write a message.
           </small>
           <button type="submit">Submit</button>
