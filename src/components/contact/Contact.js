@@ -58,7 +58,7 @@ const Contact = () => {
                 name="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className={nameIsValid ? style.valid : style.invalid}
+                className={nameIsValid ? "" : style.invalid}
               />
               <small
                 className={meassageIsValid ? style.opacity0 : style.opacity1}
@@ -73,7 +73,7 @@ const Contact = () => {
                 name="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className={emailIsValid ? style.valid : style.invalid}
+                className={emailIsValid ? "" : style.invalid}
               />
               <small
                 className={meassageIsValid ? style.opacity0 : style.opacity1}
@@ -88,7 +88,7 @@ const Contact = () => {
                 name="subject"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
-                className={subjectIsValid ? style.valid : style.invalid}
+                className={subjectIsValid ? "" : style.invalid}
               />
               <small
                 className={meassageIsValid ? style.opacity0 : style.opacity1}
@@ -102,17 +102,12 @@ const Contact = () => {
             placeholder="Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className={meassageIsValid ? style.valid : style.invalid}
+            className={meassageIsValid ? "" : style.invalid}
           ></textarea>
           <small className={meassageIsValid ? style.opacity0 : style.opacity1}>
             Please write a message.
           </small>
-          <button
-            type="submit"
-            className={formIsValid ? style.btn : style.disable}
-          >
-            Submit
-          </button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>

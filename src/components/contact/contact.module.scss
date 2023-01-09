@@ -1,24 +1,5 @@
 @use "../../style/mixins.scss" as mix;
 @use "../../style/variable.scss" as color;
-@mixin inpt {
-  display: block;
-  background: color.$white;
-  border: 0;
-  padding: 1.3rem 1.3rem 1.3rem 1.3rem;
-  background-color: rgba(255, 250, 197, 0.9);
-  color: color.$black;
-  border-radius: 0.5rem;
-  font-size: 1.4rem;
-  letter-spacing: 0.1rem;
-  width: 100%;
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0.4rem 0.4rem rgba(color.$paragraph, 0.3);
-  }
-  &::placeholder {
-    color: color.$white;
-  }
-}
 
 .background {
   background-image: url("../../assets/imgs/contact.jpg");
@@ -57,15 +38,21 @@
         & div {
           width: 100%;
           & input {
-            @include inpt;
+            @include mix.inpt;
+            &.invalid {
+              @include mix.invalid;
+            }
           }
         }
       }
       & textarea {
-        @include inpt;
+        @include mix.inpt;
         width: 85%;
         height: 15rem;
         margin-top: 2.5rem;
+        &.invalid {
+          @include mix.invalid;
+        }
       }
       & button,
       .btn {
@@ -79,10 +66,10 @@
           background-color: color.$dark-yellow;
         }
       }
-      & small {
-        color: rgb(255, 36, 36);
-        font-size: 1.2rem;
-      }
+    }
+    & small {
+      color: rgb(255, 36, 36);
+      font-size: 1.1rem;
     }
   }
 }
