@@ -10,7 +10,7 @@ import img3 from "../../assets/imgs/img3.jpg";
 
 const Banner = () => {
   return (
-    <>
+    <section id="Home">
       <video autoPlay loop muted>
         eslint-disable-next-line react/jsx-no-comment-textnodes
         <source src={video} type="video/mp4"></source>
@@ -63,7 +63,7 @@ const Banner = () => {
           </section>
         </main>
       </div>
-    </>
+    </section>
   );
 };
 

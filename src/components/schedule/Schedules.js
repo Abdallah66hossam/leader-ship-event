@@ -13,7 +13,7 @@ const Schedules = () => {
 
   return (
     <>
-      <div className={style.schedules}>
+      <div className={style.schedules} id="Schedules">
         <div className={style.heading}>
           <h2>
             <div>

@@ -9,7 +9,7 @@ import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
 
 const Speakers = () => {
   return (
-    <div className={style.speakers}>
+    <div className={style.speakers} id="Speakers">
       <div className={style.heading}>
         <h2>
           <div>

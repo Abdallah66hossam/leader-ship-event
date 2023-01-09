@@ -7,7 +7,7 @@ import avatar4 from "../../assets/imgs/avatar4.jpg";
 
 const About = () => {
   return (
-    <div className={style.about}>
+    <div className={style.about} id="About">
       <div className={style.story}>
         <h2>
           <div>
