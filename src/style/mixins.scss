@@ -1,4 +1,5 @@
 @use "./variable.scss" as color;
+@use "./responsive.scss" as res;
 
 @mixin absCenter {
   position: absolute;
@@ -23,11 +24,23 @@
     font-size: 3rem;
     color: color.$medium-yellow;
     text-transform: capitalize;
+    @include res.respnesive(tab) {
+      font-size: 3rem;
+    }
+    @include res.respnesive(phone) {
+      font-size: 2rem;
+    }
     span {
       color: color.$light-yellow;
       border-bottom: 0.4rem solid color.$light-yellow;
       font-size: 5rem;
       padding-bottom: -5rem;
+      @include res.respnesive(tab) {
+        font-size: 4rem;
+      }
+      @include res.respnesive(phone) {
+        font-size: 3rem;
+      }
     }
   }
 

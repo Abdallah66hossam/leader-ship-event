@@ -1,5 +1,6 @@
 @use "../../style/mixins.scss" as mix;
 @use "../../style/variable.scss" as color;
+@use "../../style/responsive.scss" as res;
 
 .register {
   @include mix.flexRow;
@@ -9,6 +10,14 @@
   background-attachment: fixed;
   background-size: 100% 100%;
   height: 50rem;
+  @include res.respnesive(desktop) {
+    padding: 0 5%;
+  }
+  @include res.respnesive(tab) {
+    @include mix.flexCol;
+    align-items: start;
+    gap: 3rem;
+  }
   & .heading {
     @include mix.Heading;
     & p {
@@ -24,6 +33,9 @@
     &:hover {
       background-color: color.$light-yellow;
       color: color.$white;
+    }
+    @include res.respnesive(desktop) {
+      left: 2%;
     }
   }
 }
