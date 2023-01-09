@@ -103,7 +103,7 @@
   }
   & .human1 {
     height: 40rem;
-    background-position: center;
+    background-position: top center;
     margin-left: 10%;
     width: 100%;
     grid-column: 2/3;
@@ -147,7 +147,7 @@
         width: 50rem;
       }
       @include res.respnesive(tab) {
-        width: 30rem;
+        width: 25rem;
       }
       @include res.respnesive(phone) {
         @include mix.flexCol;
@@ -161,7 +161,7 @@
           width: 40rem;
         }
         @include res.respnesive(tab) {
-          width: 30rem;
+          width: 25rem;
         }
         & .text {
           @include text;
