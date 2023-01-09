@@ -15,10 +15,7 @@ const NavBar = () => {
     window.addEventListener("scroll", handelScrollNav);
     return () => window.removeEventListener("scroll", handelScrollNav);
   }, []);
-  // nav bars
-  // <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  //     <span class="navbar-toggler-icon"></span>
-  // </button>
+
   return (
     <nav className={scroll ? style.back : ""}>
       <a href="home" className={style.logo}>

@@ -42,6 +42,7 @@
       }
       & ul {
         @include mix.absCenter;
+        top: 55%;
         left: 37%;
         & h4,
         a {

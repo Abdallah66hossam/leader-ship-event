@@ -1,0 +1,46 @@
+@use "../../style/mixins.scss" as mix;
+@use "../../style/variable.scss" as color;
+
+footer {
+  padding: 16rem 8%;
+  @include mix.flexCol;
+  & .contact {
+    @include mix.flexRow;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 6rem;
+    & .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      color: color.$light-yellow;
+      & > .bullseye {
+        font-size: 4.6rem;
+      }
+      & .brand {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+      }
+    }
+    & .social {
+      @include mix.flexRow;
+      justify-content: space-between;
+      width: 20%;
+      & > * {
+        cursor: pointer;
+        font-size: 2rem;
+        transition: 0.2s;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  & .links {
+    @include mix.flexRow;
+    justify-content: space-between;
+    width: 40%;
+    padding: 2rem 0;
+  }
+}
