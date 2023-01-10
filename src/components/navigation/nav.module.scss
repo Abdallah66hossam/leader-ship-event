@@ -71,6 +71,9 @@ nav {
     @include mix.flexRow;
     justify-content: space-between;
     width: 65%;
+    & li > * {
+      cursor: pointer;
+    }
     @include res.respnesive(desktop) {
       width: 60%;
     }

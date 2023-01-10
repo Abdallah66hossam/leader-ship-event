@@ -6,7 +6,7 @@ import { AiFillYoutube } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="Footer">
       <div className={style.contact}>
         <a href="home" className={style.logo}>
           <BiBullseye className={style.bullseye} />

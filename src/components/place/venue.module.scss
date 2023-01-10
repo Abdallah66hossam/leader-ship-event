@@ -24,6 +24,7 @@
     }
     & .map {
       border-radius: 1.4rem;
+      margin: 0 auto;
     }
     & .cart {
       background-color: color.$dark-black;
@@ -33,8 +34,9 @@
       position: relative;
       border-radius: 1.2rem;
       overflow: hidden;
-      @include res.respnesive(tab) {
-        width: 70%;
+      margin: 5rem auto;
+      @include res.respnesive(desktop) {
+        width: 80%;
       }
       @include res.respnesive(phone) {
         width: 90%;

@@ -9,6 +9,7 @@ import img2 from "../../assets/imgs/img2.jpg";
 import img3 from "../../assets/imgs/img3.jpg";
 import LightSpeed from "react-reveal/LightSpeed";
 import { Fade } from "react-reveal";
+import { Link } from "react-scroll";
 
 const Banner = () => {
   return (
@@ -32,7 +33,9 @@ const Banner = () => {
             <span>July 12 to 18, 2022</span>
             <span>Times Square, NY</span>
           </div>
-          <BsArrowDown className={style.arrow} />
+          <Link to="Footer" duration={1000} smooth={true} spy={true}>
+            <BsArrowDown className={style.arrow} />
+          </Link>
           <Fade bottom cascade>
             <section className={style.cards}>
               <article>

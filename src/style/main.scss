@@ -14,6 +14,7 @@ body {
   line-height: 1.5;
   background: color.$dark-black;
   color: color.$white;
+  overflow-x: hidden;
 }
 a {
   color: color.$white;
