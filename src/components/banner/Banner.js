@@ -7,8 +7,7 @@ import video from "../../assets/videos/video.mp4";
 import img1 from "../../assets/imgs/img1.jpg";
 import img2 from "../../assets/imgs/img2.jpg";
 import img3 from "../../assets/imgs/img3.jpg";
-import LightSpeed from "react-reveal/LightSpeed";
-import { Fade } from "react-reveal";
+
 import { Link } from "react-scroll";
 
 const Banner = () => {
@@ -21,14 +20,13 @@ const Banner = () => {
       </video>
       <div className={style.banner}>
         <main>
-          <LightSpeed left cascade>
-            <h1>
-              <div>
-                <span>leadership</span> comfference
-              </div>
-              2022
-            </h1>
-          </LightSpeed>
+          <h1>
+            <div>
+              <span>leadership</span> comfference
+            </div>
+            2022
+          </h1>
+
           <div className={style.time}>
             <span>July 12 to 18, 2022</span>
             <span>Times Square, NY</span>
@@ -36,40 +34,39 @@ const Banner = () => {
           <Link to="Footer" duration={1000} smooth={true} spy={true}>
             <BsArrowDown className={style.arrow} />
           </Link>
-          <Fade bottom cascade>
-            <section className={style.cards}>
-              <article>
-                <div
-                  className={style.conffernce}
-                  style={{ backgroundImage: `url(${img1})` }}
-                >
-                  <h2>2019 highlights</h2>
 
-                  <AiFillYoutube className={style.youtube} />
-                </div>
-              </article>
-              <article>
-                <div
-                  className={style.conffernce}
-                  style={{ backgroundImage: `url(${img2})` }}
-                >
-                  <h2>2020 highlights</h2>
+          <section className={style.cards}>
+            <article>
+              <div
+                className={style.conffernce}
+                style={{ backgroundImage: `url(${img1})` }}
+              >
+                <h2>2019 highlights</h2>
 
-                  <AiFillYoutube className={style.youtube} />
-                </div>
-              </article>
-              <article>
-                <div
-                  className={style.conffernce}
-                  style={{ backgroundImage: `url(${img3})` }}
-                >
-                  <h2>2021 highlights</h2>
+                <AiFillYoutube className={style.youtube} />
+              </div>
+            </article>
+            <article>
+              <div
+                className={style.conffernce}
+                style={{ backgroundImage: `url(${img2})` }}
+              >
+                <h2>2020 highlights</h2>
 
-                  <AiFillYoutube className={style.youtube} />
-                </div>
-              </article>
-            </section>
-          </Fade>
+                <AiFillYoutube className={style.youtube} />
+              </div>
+            </article>
+            <article>
+              <div
+                className={style.conffernce}
+                style={{ backgroundImage: `url(${img3})` }}
+              >
+                <h2>2021 highlights</h2>
+
+                <AiFillYoutube className={style.youtube} />
+              </div>
+            </article>
+          </section>
         </main>
       </div>
     </section>

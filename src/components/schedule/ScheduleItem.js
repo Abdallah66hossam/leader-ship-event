@@ -18,8 +18,6 @@ import style from "./item.module.scss";
 import { BiTime } from "react-icons/bi";
 import { BsLayoutSidebar } from "react-icons/bs";
 
-import Fade from "react-reveal/Fade";
-
 const ScheduleItem = (props) => {
   const items = [
     {
@@ -125,36 +123,34 @@ const ScheduleItem = (props) => {
   return (
     <>
       {fileredItems.map((item) => (
-        <Fade left>
-          <section className={style.tobic} key={Math.random()}>
-            <img src={item.img} alt="palce img" className={style.place} />
-            <div className={style.text}>
-              <h4>{item.title}</h4>
-              <p>{item.description}</p>
-              <div className={style.details}>
-                <div className={style.person}>
-                  <img
-                    src={item.avatar}
-                    alt="avatar img"
-                    className={style.avatar}
-                  />
-                  <div>
-                    <h5>{item.person}</h5>
-                    <h6>{item.job}</h6>
-                  </div>
+        <section className={style.tobic} key={Math.random()}>
+          <img src={item.img} alt="palce img" className={style.place} />
+          <div className={style.text}>
+            <h4>{item.title}</h4>
+            <p>{item.description}</p>
+            <div className={style.details}>
+              <div className={style.person}>
+                <img
+                  src={item.avatar}
+                  alt="avatar img"
+                  className={style.avatar}
+                />
+                <div>
+                  <h5>{item.person}</h5>
+                  <h6>{item.job}</h6>
                 </div>
-                <span>
-                  <BiTime className={style.icon} />
-                  {item.time}
-                </span>
-                <span>
-                  <BsLayoutSidebar className={style.icon} />
-                  {item.place}
-                </span>
               </div>
+              <span>
+                <BiTime className={style.icon} />
+                {item.time}
+              </span>
+              <span>
+                <BsLayoutSidebar className={style.icon} />
+                {item.place}
+              </span>
             </div>
-          </section>
-        </Fade>
+          </div>
+        </section>
       ))}
     </>
   );
