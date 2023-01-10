@@ -6,6 +6,7 @@ const Schedules = () => {
   const [filterItems, setFilteredItems] = useState(null);
   const handelFiltering = (event) => {
     setFilteredItems(event.target.attributes[0].value);
+    console.log(event.target.attributes[0].value);
   };
   useEffect(() => {
     setFilteredItems("d1");

@@ -1,5 +1,6 @@
 @use "../../style/mixins.scss" as mix;
 @use "../../style/variable.scss" as color;
+@use "../../style/responsive.scss" as res;
 
 .background {
   background-image: url("../../assets/imgs/contact.jpg");
@@ -9,13 +10,19 @@
   background-size: cover;
   height: 65rem;
   position: relative;
+  @include res.respnesive(desktop) {
+    height: 80rem;
+  }
   & .contact {
     width: 60%;
     @include mix.absCenter;
     border-radius: 3rem;
     background-color: color.$dark-black;
     overflow: hidden;
-    height: 80%;
+    height: 85%;
+    @include res.respnesive(phone) {
+      width: 80%;
+    }
     & h4 {
       width: 100%;
       background: color.$medium-yellow;
@@ -35,6 +42,9 @@
         @include mix.flexRow;
         gap: 1.5rem;
         width: 85%;
+        @include res.respnesive(desktop) {
+          @include mix.flexCol;
+        }
         & div {
           width: 100%;
           & input {

@@ -127,7 +127,7 @@
     position: relative;
     top: 80%;
     left: 125%;
-    gap: 5rem;
+    gap: 3rem;
     @include res.respnesive(desktop) {
       left: 50%;
       top: 20%;
@@ -140,7 +140,7 @@
     & section {
       @include mix.flexRow;
       width: 60rem;
-      gap: 5rem;
+      gap: 3rem;
       @include res.respnesive(desktop) {
         @include mix.flexCol;
         left: 0;
