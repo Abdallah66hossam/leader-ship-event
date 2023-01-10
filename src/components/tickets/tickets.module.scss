@@ -1,8 +1,12 @@
 @use "../../style/mixins.scss" as mix;
 @use "../../style/variable.scss" as color;
+@use "../../style/responsive.scss" as res;
 
 .tickets {
-  padding: 16rem 8%;
+  padding: 16rem 6%;
+  @include res.respnesive(tab) {
+    padding: 16rem 4%;
+  }
   & .heading {
     @include mix.Heading;
     margin-bottom: 2rem;
@@ -12,6 +16,14 @@
     @include mix.flexRow;
     justify-content: space-between;
     margin-top: 10rem;
+    flex-wrap: wrap;
+
+    @include res.respnesive(desktop) {
+      @include mix.flexCol;
+      gap: 10rem;
+      justify-content: end;
+      width: 100%;
+    }
     & .cart {
       background-color: color.$black;
       width: 29%;
@@ -20,6 +32,15 @@
       position: relative;
       border-radius: 1.2rem;
       overflow: hidden;
+      @include res.respnesive(desktop) {
+        width: 70%;
+      }
+      @include res.respnesive(tab) {
+        width: 80%;
+      }
+      // @include res.respnesive(phone) {
+      //   font-size: 2rem;
+      // }
       & .head {
         background-color: color.$medium-yellow;
         position: absolute;

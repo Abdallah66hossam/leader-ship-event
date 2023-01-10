@@ -1,9 +1,13 @@
 @use "../../style/mixins.scss" as mix;
 @use "../../style/variable.scss" as color;
+@use "../../style/responsive.scss" as res;
 
 .venueSec {
   padding: 16rem 8%;
   background-color: color.$black;
+  @include res.respnesive(tab) {
+    padding: 16rem 4%;
+  }
   & .heading {
     @include mix.Heading;
     margin-bottom: 6rem;
@@ -13,6 +17,11 @@
     @include mix.flexRow;
     justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap;
+    @include res.respnesive(tab) {
+      justify-content: center;
+      gap: 7rem;
+    }
     & .map {
       border-radius: 1.4rem;
     }
@@ -24,6 +33,12 @@
       position: relative;
       border-radius: 1.2rem;
       overflow: hidden;
+      @include res.respnesive(tab) {
+        width: 70%;
+      }
+      @include res.respnesive(phone) {
+        width: 90%;
+      }
       & .head {
         background-color: color.$medium-yellow;
         position: absolute;
