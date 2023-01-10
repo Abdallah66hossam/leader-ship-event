@@ -42,27 +42,28 @@
       width: 25%;
       height: 12rem;
       background: transparent;
+      font-size: 3.2rem;
+      letter-spacing: 0.2rem;
+      color: color.$light-yellow;
+      font-weight: 700;
       @include res.respnesive(desktop) {
         width: 100%;
+      }
+
+      @include res.respnesive(tab) {
+        font-size: 2.8rem;
+        letter-spacing: 0.1rem;
+      }
+      @include res.respnesive(phone) {
+        font-size: 2.2rem;
+        letter-spacing: 0.1rem;
       }
       &.active,
       &:hover {
         border-left: 3px solid color.$light-yellow;
-        color: color.$light-yellow;
         box-shadow: rgba(255, 255, 255, 0.2) 0px 10px 50px;
       }
-      & h3 {
-        font-size: 3.2rem;
-        letter-spacing: 0.2rem;
-        @include res.respnesive(tab) {
-          font-size: 2.8rem;
-          letter-spacing: 0.1rem;
-        }
-        @include res.respnesive(phone) {
-          font-size: 2.2rem;
-          letter-spacing: 0.1rem;
-        }
-      }
+
       & small {
         font-size: 1rem;
       }
